@@ -11,6 +11,12 @@
 	<meta charset="UTF-8">
 	<title></title>
 
+	<!-- If JS is available, changes <html> class to js -->
+	<script>
+		var docElement = document.documentElement;
+		docElement.className = docElement.className.replace(/\bno-js\b/,'') + ' js';
+	</script>
+
 	<script type="text/javascript" src="js/script.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 </head>
