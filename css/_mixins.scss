@@ -9,6 +9,7 @@
 // 03. Clearfix - cf()
 // 04. Selections - selection()
 // 05. Box shadows
+// 06. Transforms
 //
 // =====================================
 
@@ -85,4 +86,14 @@
 @mixin box-shadow ($values) {
     -webkit-box-shadow: $values; // iOS Safari 3.2 - 4.3, Android 2.1+
             box-shadow: $values;
+}
+
+// 06. Transforms
+
+@mixin transform ($values) {
+    -webkit-transform: $values;
+       -moz-transform: $values;
+         -o-transform: $values;
+        -ms-transform: $values;
+            transform: $values;
 }
