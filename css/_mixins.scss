@@ -8,6 +8,7 @@
 // 02. transitions - transition()
 // 03. Clearfix - cf()
 // 04. Selections - selection()
+// 05. Box shadows
 //
 // =====================================
 
@@ -78,4 +79,10 @@
 @mixin selection($background, $foreground:#fff) {
     ::-moz-selection { background: $background; color: $foreground; text-shadow: none; }
     ::selection { background: $background; color: $foreground; text-shadow: none; }
+}
+
+// 05. Box shadows
+@mixin box-shadow ($values) {
+    -webkit-box-shadow: $values; // iOS Safari 3.2 - 4.3, Android 2.1+
+            box-shadow: $values;
 }
