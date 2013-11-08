@@ -1,4 +1,17 @@
-// Add rounded corners to any element
+// =====================================
+//    Mixins
+// -------------------------------------
+//
+// Contents
+//
+// 01. Rounded corners - border-radius()
+// 02. transitions - transition()
+// 03. Clearfix - cf()
+// 04. Selections - selection()
+//
+// =====================================
+
+// 01. Add rounded corners to any element
 
 @mixin border-radius ($radius: 5px) {
 	border-radius: $radius;
@@ -6,8 +19,7 @@
 	-moz-border-radius: $radius;
 }
 
-
-// Add a .2s transition to UI elements
+// 02. Add a transition to UI elements (default 0.1s)
 
 @mixin transition ($speed: 0.1s) {
 	-webkit-transition:all $speed ease-in-out;
@@ -15,9 +27,9 @@
 	transition:all $speed ease-in-out;
 }
 
-// clearfix from the Nicolas Gallagher site ~ http://mrqw.es/t/gc
+// 03. clearfix from the Nicolas Gallagher site ~ http://mrqw.es/t/gc
 
-@mixin clearfix-micro() {
+@mixin cf() {
     & {
         *zoom: 1;
     }
@@ -29,4 +41,11 @@
     &:after {
         clear: both;
     }
+}
+
+// 04. specify a background & foreground colour for element selections; foreground color defaults to white if not specified ~ http://mrqw.es/t/iy
+
+@mixin selection($background, $foreground:#fff) {
+    ::-moz-selection { background: $background; color: $foreground; text-shadow: none; }
+    ::selection { background: $background; color: $foreground; text-shadow: none; }
 }

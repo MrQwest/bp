@@ -1,4 +1,18 @@
+// =====================================
+//    helpers
+// -------------------------------------
+//
+// Contents
+//
+// 1. Hide from everything
+//
+// =====================================
+
+
 // hide from everything ----------------
+// Thanks Stu! ~ http://mrqw.es/t/j0
+
+// these blocks will only appear if extended. So div%hidden would create div.hidden {}
 
 %hidden {
         display: none !important;
