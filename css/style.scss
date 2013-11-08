@@ -1,12 +1,6 @@
-@import "reset";
-@import "mixin";
-
-/* VARIABLES =================================== */
-
-
-
-/* MIXINS ====================================== */
-
+@import "reset"; // Lets level the playing field
+@import "_vars"; // Import the variables
+@import "_mixins"; // Import the mixins file
 
 
 /* GENERAL STYLES ================================= */
